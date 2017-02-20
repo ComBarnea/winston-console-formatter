@@ -2,7 +2,7 @@ var utils = require('./utils');
 var Message = require('./message');
 var Colorizer = require('./colorizer');
 
-function configuredFormatter ({ colors , noMeta, noStack }) {
+function configuredFormatter ({ colors , noMeta = false, noStack = false}) {
   /**
    * @param {Object} options
    * @return {string}
@@ -36,8 +36,8 @@ function configuredFormatter ({ colors , noMeta, noStack }) {
       .setMessage(message || objectMessage)
       .toString();
 
-    if (noStack !== false)formattedMessage += utils.getStackTrace(stack || trace);
-    if (noMeta !== false) formattedMessage += utils.metaToYAML(meta);
+    if (noStack !== true)formattedMessage += utils.getStackTrace(stack || trace);
+    if (noMeta !== true) formattedMessage += utils.metaToYAML(meta);
 
     return formattedMessage;
   };
