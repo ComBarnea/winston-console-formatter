@@ -1,6 +1,6 @@
 {
-  "name": "winston-console-formatter",
-  "version": "0.3.1",
+  "name": "combarnea/winston-console-formatter",
+  "version": "1.0.0",
   "description": "Pretty print console formatter in yaml like style",
   "main": "./dist/index.js",
   "devDependencies": {
@@ -21,7 +21,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/eugeny-dementev/winston-console-formatter.git"
+    "url": "https://github.com/combarnea/winston-console-formatter.git"
   },
   "keywords": [
     "winston",
