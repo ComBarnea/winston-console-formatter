@@ -25,7 +25,11 @@ This is custom config for default winston console transform.
     level: 'silly'
   }); 
   
-  logger.add(winston.transports.Console, toYAML.config());
+  logger.add(winston.transports.Console, toYAML.config({
+    colors, // colorizer colors array
+    noMeta, // boolean - not to print metadata, if true metadata will not be printed
+    noStack // boolean - not to print stack trace, if true stack trace will not be printed
+  }));
   
   logger.log('error', 'message');
   logger.log('warn', 'message');
